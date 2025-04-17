@@ -32,19 +32,22 @@ void input()
 
 void mergeSort(int low, int high)
 {
-    return;
-}
+    if(low >= high)
+    {
+        return;
+    }
 
-int mid = (low + high) / 2;
 
-mergeSort(low, mid);
-mergeSort(mid + 1, high);
+    int mid = (low + high) / 2;
 
-int i = low;
-int j = mid + 1;
-int k = low;
+    mergeSort(low, mid);
+    mergeSort(mid + 1, high);
 
-while (i <= mid && j <= high)
+    int i = low;
+    int j = mid + 1;
+    int k = low;
+
+    while (i <= mid && j <= high)
     {
         if (arr[i] <= arr[j])
         {
@@ -72,3 +75,8 @@ while (i <= mid && j <= high)
         i++;            
         k++;          
     }
+    for (int x = low; x <= high; x++)
+    {
+        arr[x] = B[x];
+    }
+}
