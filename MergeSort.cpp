@@ -29,3 +29,10 @@ void input()
         cin >> arr[i];
     }
 }
+
+void mergesort(int low, int high)
+{
+    return;
+}
+
+int mid = (low + high) / 2;
